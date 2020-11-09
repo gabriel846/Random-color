@@ -15,12 +15,14 @@
 
 <script type="text/javascript">
     function getNewColor() {
-        var symbols,color;
-        symbols = "0123456789ABCDEF"
+        var symbols,color;/*AQUI AONDE COMEÇA A CRIAÇAO DAS CORES*/
 
-        color = "#";
-        for(var i =0;i<6;i++){
-            color = color + symbols[Math.floor(Math.random() * 16)];
+        symbols = "0123456789ABCDEF"/*OS SIMBOLOS QUE SERAO 6 ALEATORIOS PARA CRIAR A COR*/
+
+        color = "#";<!---->
+        for(var i =0;i<6;i++){ /*A COR DEVE SER MENOR QUE 6 */
+            color = color + symbols[Math.floor(Math.random() * 16)];/*OS CONJUNTOS UNIDOS Q CRIARAO O CODIGO DA COR */
+
         }
         document.body.style.background = color;
         document.getElementById("hex").innerHTML = color;
